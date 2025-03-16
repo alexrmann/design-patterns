@@ -37,13 +37,13 @@ button, input, label {
   line-height: 1.1;
 }
 
-/* Balance text wrapping on headings */
+/* Balance text wrapping on headings. Some people will find this not appropriate, so you might want to remove this one. */
 h1, h2,
 h3, h4 {
   text-wrap: balance;
 }
 
-/* A elements that don't have a class get default styles */
+/* A elements that don't have a class get default styles. If you don't like to set links to inherit the currentColor of text by default, you probably want to remove it. */
 a:not([class]) {
   text-decoration-skip-ink: auto;
   color: currentColor;
@@ -68,7 +68,7 @@ textarea:not([rows]) {
   min-height: 10em;
 }
 
-/* Anything that has been anchored to should have extra scroll margin */
+/* Anything that has been anchored to should have extra scroll margin. You might want to adjust this if you have a fixed header though. */
 :target {
   scroll-margin-block: 5ex;
 }
