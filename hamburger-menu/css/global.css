@@ -333,3 +333,25 @@ main:focus {
   */
 }
 
+/* Convert burger bars into a 'close' icon when the menu is open. 
+
+Sets the background and border of the main (central) bar to be transparent, and rotates the pseudo-elements in opposite directions to create a cross.
+
+You should experiment with the transformations until you are happy with it.
+*/
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__bar::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__bar::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__bar {
+  background: transparent;
+  border-color: transparent;
+  transform: rotate(180deg);
+}
