@@ -125,38 +125,77 @@ main:focus {
 
 /* ~~~ CSS Blocks ~~~ */
 
-.site-head {
-    padding: 0.6rem 0;
-    background: var(--color-primary);
-    border-top: 5px solid var(--color-primary);
-    border-bottom: 5px solid var(--color-primary-shade);
-    color: var(--color-light);
-    line-height: 1.1;
+/* Header Styles */
 
-    /* 
+.site-head {
+  padding: 0.6rem 0;
+  background: var(--color-primary);
+  border-top: 5px solid var(--color-primary);
+  border-bottom: 5px solid var(--color-primary-shade);
+  color: var(--color-light);
+  line-height: 1.1;
+
+  /* 
     We add the colour to site head and a nice bottom border. Having just a bottom border puts things out of kilter, visually, so we add an optical adjustment, in the form of the same border style—but the same colour as the background. This border is essentially invisible, but it levels things out.
     */
-  }
-  
-  .site-head :focus {
-    outline-color: var(--color-light);
-  }
-  
-  .site-head__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0 1rem;
+}
 
-    /* 
+.site-head :focus {
+  outline-color: var(--color-light);
+}
+
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1rem;
+
+  /* 
     The site-head__inner element uses flexbox to push elements away from each other—importantly, only where there is space. We use flex-wrap: wrap to allow items to stack on top of each other where needed. 
     
     Because justify-content affects the horizontal axis—because we are using the default flex-direction value of row—it won’t affect items that are not on the same axis anymore. This means we get responsive layout with no media queries.
     */
-  }
-  
-  .site-head__brand {
-    display: block;
-    width: 3rem;
-  }  
+}
+
+.site-head__brand {
+  display: block;
+  width: 3rem;
+}
+
+/* Navigation Styles */
+
+/* We don’t have any specific styles for the .navigation block itself. This is because with CUBE CSS, a block is more of a namespace. */
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.8rem;
+  padding: 0;
+
+  /* 
+  We’re using the same sort of flexible layout approach as we did in the site-head block.
+
+  We’re using gap to space elements and again, allowing items to fall onto a new line if there’s no space. This gives us a handy, extremely acceptable, minimum viable experience, regardless of viewport size.
+  */
+}
+
+.navigation li {
+  margin: 0.1rem;
+
+  /*
+  For browsers that do not support gap, we provide a fallback by adding a tiny, 0.1rem margin on all sides of a list item.
+  */
+}
+
+.navigation a {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.navigation a:hover {
+  color: var(--color-dark);
+}
