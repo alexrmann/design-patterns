@@ -299,3 +299,37 @@ main:focus {
 .burger-menu[enabled='true'] .navigation li {
   font-size: 1.5rem;
 }
+
+/* Interactive States */
+/* The panel’s visibility can only be changed if the burger menu is enabled and the status is open. */
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__panel {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 400ms ease;
+
+  /*
+  When the panel is “open”, we transition the opacity to 1 and set visibility to visible to show it.
+  */
+}
+
+.burger-menu[enabled='true'][status='closed'] .burger-menu__panel > * {
+  opacity: 0;
+  transform: translateY(5rem);
+
+  /*
+  In the “closed” state, we visually hide the navigation items with opacity and push them down with transform.
+  */
+}
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__panel > * {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 500ms cubic-bezier(0.17, 0.67, 0, 0.87) 700ms, opacity 500ms ease
+      800ms;
+
+  /*
+  When the panel is in the “open” state, we transition them back to being visible with full opacity.
+  */
+}
+
