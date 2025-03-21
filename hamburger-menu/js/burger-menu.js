@@ -106,6 +106,31 @@ class BurgerMenu extends HTMLElement {
         break;
     }
   }
+
+  manageFocus() {
+    if (!this.state.enabled) {
+      this.focusableElements.forEach((element) =>
+        element.removeAttribute("tabindex")
+      );
+      return;
+    }
+
+    switch (this.state.status) {
+      case "open":
+        this.focusableElements.forEach((element) =>
+          element.removeAttribute("tabindex")
+        );
+        break;
+      case "closed":
+        [...this.focusableElements]
+          .filter(
+            (element) =>
+              element.getAttribute("data-element") !== "burger-menu-trigger"
+          )
+          .forEach((element) => element.setAttribute("tabindex", "-1"));
+        break;
+    }
+  }
 }
 
 if ("customElements" in window) {
