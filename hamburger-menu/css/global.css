@@ -6,10 +6,6 @@
   --color-primary-shade: #b90f4c;
 }
 
-html {
-  background-color: #eeeeee;
-}
-
 body {
   background: var(--color-light-shade);
   color: var(--color-dark);
