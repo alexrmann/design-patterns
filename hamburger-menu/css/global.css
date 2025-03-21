@@ -37,12 +37,16 @@ a {
 :focus {
   outline: 1px dotted currentColor;
   outline-offset: 0.2rem;
+
+  /* We set :focus styles globally by modifying how the outline looks. This means that any element that can receive focus, such as <a> and <button> will have a consistent focus style. The outline-offset pulls the outline away from the content a bit, which in my opinion, makes it more user-friendly. */
 }
 
 p,
 li,
 dl {
   max-width: 70ch;
+
+  /* We set a max-width on headings, paragraphs, lists elements and description lists using a ch unit. This really helps with readability and a ch unit is equal to the width of a 0 character in your chosen font and size. */
 }
 
 article {
@@ -52,6 +56,8 @@ article {
 
 main:focus {
   outline: none;
+
+  /* We remove focus styles from the <main> element because when someone activates the skip link from before, it programatically focuses the <main> because it’s the :target. The focus ring is unnecessary though, because making the <main> focusable, programatically, is purely for making tabbing on the keyboard more predictable for users who want to skip navigation. */
 }
 
 @media (min-width: 40em) {
