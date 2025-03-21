@@ -1,0 +1,357 @@
+/* ~~~ Global Styles ~~~ */
+
+:root {
+  --color-light: #ffffff;
+  --color-light-shade: #fafffd;
+  --color-dark: #062726;
+  --color-primary: #d81159;
+  --color-primary-shade: #b90f4c;
+}
+
+body {
+  background: var(--color-light-shade);
+  color: var(--color-dark);
+  line-height: 1.5;
+  font-family: "Hind", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: "Halant", Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  line-height: 1.1;
+  max-width: 30ch;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: currentColor;
+}
+
+:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 0.2rem;
+
+  /* We set :focus styles globally by modifying how the outline looks. This means that any element that can receive focus, such as <a> and <button> will have a consistent focus style. The outline-offset pulls the outline away from the content a bit, which in my opinion, makes it more user-friendly. */
+}
+
+p,
+li,
+dl {
+  max-width: 70ch;
+
+  /* We set a max-width on headings, paragraphs, lists elements and description lists using a ch unit. This really helps with readability and a ch unit is equal to the width of a 0 character in your chosen font and size. */
+}
+
+article {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+}
+
+main:focus {
+  outline: none;
+
+  /* We remove focus styles from the <main> element because when someone activates the skip link from before, it programatically focuses the <main> because it’s the :target. The focus ring is unnecessary though, because making the <main> focusable, programatically, is purely for making tabbing on the keyboard more predictable for users who want to skip navigation. */
+}
+
+@media (min-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ~~~ CSS Utilities ~~~ */
+
+.skip-link {
+  display: inline-block;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  background: var(--color-light);
+  color: var(--color-primary-shade);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.skip-link:hover {
+  background: var(--color-dark);
+  color: var(--color-light-shade);
+}
+
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+
+  /* Visually hides the link when it is not focused. Screen readers can still "see" it. */
+}
+
+.wrapper {
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  /* We specifically add left/right padding/margin here so other compositional CSS can comfortably manage vertical space, if needed. */
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 1em);
+
+  /* The flow utility provides flow and rhythm automatically between direct sibling elements. Where --flow-space is not defined: the default value is 1em, which equals the font size of the affected element. */
+}
+
+/* ~~~ CSS Blocks ~~~ */
+
+/* Header Styles */
+
+.site-head {
+  padding: 0.6rem 0;
+  background: var(--color-primary);
+  border-top: 5px solid var(--color-primary);
+  border-bottom: 5px solid var(--color-primary-shade);
+  color: var(--color-light);
+  line-height: 1.1;
+
+  /* 
+    We add the colour to site head and a nice bottom border. Having just a bottom border puts things out of kilter, visually, so we add an optical adjustment, in the form of the same border style—but the same colour as the background. This border is essentially invisible, but it levels things out.
+    */
+}
+
+.site-head :focus {
+  outline-color: var(--color-light);
+}
+
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1rem;
+
+  /* 
+    The site-head__inner element uses flexbox to push elements away from each other—importantly, only where there is space. We use flex-wrap: wrap to allow items to stack on top of each other where needed. 
+    
+    Because justify-content affects the horizontal axis—because we are using the default flex-direction value of row—it won’t affect items that are not on the same axis anymore. This means we get responsive layout with no media queries.
+    */
+}
+
+.site-head__brand {
+  display: block;
+  width: 3rem;
+}
+
+/* Navigation Styles */
+
+/* We don’t have any specific styles for the .navigation block itself. This is because with CUBE CSS, a block is more of a namespace. */
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.8rem;
+  padding: 0;
+
+  /* 
+  We’re using the same sort of flexible layout approach as we did in the site-head block.
+
+  We’re using gap to space elements and again, allowing items to fall onto a new line if there’s no space. This gives us a handy, extremely acceptable, minimum viable experience, regardless of viewport size.
+  */
+}
+
+.navigation li {
+  margin: 0.1rem;
+
+  /*
+  For browsers that do not support gap, we provide a fallback by adding a tiny, 0.1rem margin on all sides of a list item.
+  */
+}
+
+.navigation a {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.navigation a:hover {
+  color: var(--color-dark);
+}
+
+/* Burger Menu Styles */
+
+.burger-menu__trigger {
+  display: none;
+
+  /*
+  If the component is disabled—which is our default state—we don’t want to present a trigger. Hiding it with display: none will hide it from screen readers, too.
+  */
+}
+
+.burger-menu__bar,
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--color-light);
+  border: 1px solid var(--color-light);
+  position: absolute;
+  border-radius: 3px;
+  left: 50%;
+  margin-left: -12px;
+  transition: transform 350ms ease-in-out;
+
+  /*
+  Style the innerHTML bars.
+  */
+}
+
+.burger-menu__bar {
+  top: 50%;
+  transform: translateY(-50%);
+
+  /*
+  Position the .burger-menu__bar dead-center with absolute positioning, which allows us to comfortably animate it, knowing it won’t affect layout.
+  */
+}
+
+/* Render the pseudo-elements and push one up and one down. */
+
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  content: "";
+}
+
+.burger-menu__bar::before {
+  top: -8px;
+}
+
+.burger-menu__bar::after {
+  bottom: -8px;
+}
+
+/* ~~~ CSS Exceptions ~~~ */
+
+/* Handle styling of the menu when it is enabled */
+
+.burger-menu[enabled='true'] .burger-menu__trigger {
+  display: block;
+  width: 2rem;
+  height: 2rem; /* Nice big tap target */
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu[enabled='true'] .burger-menu__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5rem 1.5rem 2rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--color-primary-shade);
+  overflow-y: auto; /* Set the vertical overflow to auto so long menus can be scrolled. */
+  -webkit-overflow-scrolling: touch;
+
+  /*
+  Make panel fill the screen.
+  */
+}
+
+/* Convert the navigation into a stacked menu when the burger menu is enabled. */
+
+.burger-menu[enabled='true'] .navigation ul {
+  display: block;
+}
+
+.burger-menu[enabled='true'] .navigation ul > * + * {
+  margin-top: 2rem;
+}
+
+.burger-menu[enabled='true'] .navigation li {
+  font-size: 1.5rem;
+}
+
+/* Interactive States */
+/* The panel’s visibility can only be changed if the burger menu is enabled and the status is open. */
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__panel {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 400ms ease;
+
+  /*
+  When the panel is “open”, we transition the opacity to 1 and set visibility to visible to show it.
+  */
+}
+
+.burger-menu[enabled='true'][status='closed'] .burger-menu__panel > * {
+  opacity: 0;
+  transform: translateY(5rem);
+
+  /*
+  In the “closed” state, we visually hide the navigation items with opacity and push them down with transform.
+  */
+}
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__panel > * {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 500ms cubic-bezier(0.17, 0.67, 0, 0.87) 700ms, opacity 500ms ease
+      800ms;
+
+  /*
+  When the panel is in the “open” state, we transition them back to being visible with full opacity.
+  */
+}
+
+/* Convert burger bars into a 'close' icon when the menu is open. 
+
+Sets the background and border of the main (central) bar to be transparent, and rotates the pseudo-elements in opposite directions to create a cross.
+
+You should experiment with the transformations until you are happy with it.
+*/
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__bar::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__bar::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu[enabled='true'][status='open'] .burger-menu__bar {
+  background: transparent;
+  border-color: transparent;
+  transform: rotate(180deg);
+}
