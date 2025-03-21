@@ -8,8 +8,8 @@ class BurgerMenu extends HTMLElement {
 
     this.state = new Proxy(
       {
-        status: 'open',
-        enabled: false
+        status: "open",
+        enabled: false,
       },
       {
         set(state, key, value) {
@@ -20,13 +20,13 @@ class BurgerMenu extends HTMLElement {
             self.processStateChange();
           }
           return state;
-        }
+        },
       }
     );
   }
 
   get maxWidth() {
-    return parseInt(this.getAttribute('max-width') || 9999, 10);
+    return parseInt(this.getAttribute("max-width") || 9999, 10);
   }
 
   connectedCallback() {
@@ -48,11 +48,37 @@ class BurgerMenu extends HTMLElement {
 
     this.postRender();
   }
+
+  postRender() {
+    this.trigger = this.querySelector('[data-element="burger-menu-trigger"]');
+    this.panel = this.querySelector('[data-element="burger-menu-panel"]');
+    this.root = this.querySelector('[data-element="burger-root"]');
+    this.focusableElements = getFocusableElements(this);
+
+    if (this.trigger && this.panel) {
+      this.toggle();
+
+      this.trigger.addEventListener("click", (evt) => {
+        evt.preventDefault();
+
+        this.toggle();
+      });
+
+      document.addEventListener("focusin", () => {
+        if (!this.contains(document.activeElement)) {
+          this.toggle("closed");
+        }
+      });
+
+      return;
+    }
+
+    this.innerHTML = this.initialMarkup;
+  }
 }
 
-if ('customElements' in window) {
-  customElements.define('burger-menu', BurgerMenu);
+if ("customElements" in window) {
+  customElements.define("burger-menu", BurgerMenu);
 }
 
 export default BurgerMenu;
-
