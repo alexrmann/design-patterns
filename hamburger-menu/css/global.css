@@ -285,3 +285,17 @@ main:focus {
   Make panel fill the screen.
   */
 }
+
+/* Convert the navigation into a stacked menu when the burger menu is enabled. */
+
+.burger-menu[enabled='true'] .navigation ul {
+  display: block;
+}
+
+.burger-menu[enabled='true'] .navigation ul > * + * {
+  margin-top: 2rem;
+}
+
+.burger-menu[enabled='true'] .navigation li {
+  font-size: 1.5rem;
+}
