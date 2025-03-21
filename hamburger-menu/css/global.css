@@ -1,4 +1,4 @@
-/* Core Global Styles */
+/* ~~~ Global Styles ~~~ */
 
 :root {
   --color-light: #ffffff;
@@ -72,7 +72,7 @@ main:focus {
   }
 }
 
-/* CSS Utilities */
+/* ~~~ CSS Utilities ~~~ */
 
 .skip-link {
   display: inline-block;
@@ -122,3 +122,5 @@ main:focus {
 
   /* The flow utility provides flow and rhythm automatically between direct sibling elements. Where --flow-space is not defined: the default value is 1em, which equals the font size of the affected element. */
 }
+
+/* ~~~ CSS Blocks ~~~ */
