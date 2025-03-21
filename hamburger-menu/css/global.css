@@ -199,3 +199,59 @@ main:focus {
 .navigation a:hover {
   color: var(--color-dark);
 }
+
+/* Burger Menu Styles */
+
+.burger-menu__trigger {
+  display: none;
+
+  /*
+  If the component is disabled—which is our default state—we don’t want to present a trigger. Hiding it with display: none will hide it from screen readers, too.
+  */
+}
+
+.burger-menu__bar,
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--color-light);
+  border: 1px solid var(--color-light);
+  position: absolute;
+  border-radius: 3px;
+  left: 50%;
+  margin-left: -12px;
+  transition: transform 350ms ease-in-out;
+
+  /*
+  Style the innerHTML bars.
+  */
+}
+
+.burger-menu__bar {
+  top: 50%;
+  transform: translateY(-50%);
+
+  /*
+  Position the .burger-menu__bar dead-center with absolute positioning, which allows us to comfortably animate it, knowing it won’t affect layout.
+  */
+}
+
+/* Render the pseudo-elements and push one up and one down. */
+
+.burger-menu__bar::before,
+.burger-menu__bar::after {
+  content: "";
+}
+
+.burger-menu__bar::before {
+  top: -8px;
+}
+
+.burger-menu__bar::after {
+  bottom: -8px;
+}
+
+/* ~~~ CSS Exceptions ~~~ */
+
