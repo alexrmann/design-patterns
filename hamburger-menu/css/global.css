@@ -124,3 +124,39 @@ main:focus {
 }
 
 /* ~~~ CSS Blocks ~~~ */
+
+.site-head {
+    padding: 0.6rem 0;
+    background: var(--color-primary);
+    border-top: 5px solid var(--color-primary);
+    border-bottom: 5px solid var(--color-primary-shade);
+    color: var(--color-light);
+    line-height: 1.1;
+
+    /* 
+    We add the colour to site head and a nice bottom border. Having just a bottom border puts things out of kilter, visually, so we add an optical adjustment, in the form of the same border style—but the same colour as the background. This border is essentially invisible, but it levels things out.
+    */
+  }
+  
+  .site-head :focus {
+    outline-color: var(--color-light);
+  }
+  
+  .site-head__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 1rem;
+
+    /* 
+    The site-head__inner element uses flexbox to push elements away from each other—importantly, only where there is space. We use flex-wrap: wrap to allow items to stack on top of each other where needed. 
+    
+    Because justify-content affects the horizontal axis—because we are using the default flex-direction value of row—it won’t affect items that are not on the same axis anymore. This means we get responsive layout with no media queries.
+    */
+  }
+  
+  .site-head__brand {
+    display: block;
+    width: 3rem;
+  }  
