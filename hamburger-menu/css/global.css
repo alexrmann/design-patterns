@@ -255,3 +255,33 @@ main:focus {
 
 /* ~~~ CSS Exceptions ~~~ */
 
+/* Handle styling of the menu when it is enabled */
+
+.burger-menu[enabled='true'] .burger-menu__trigger {
+  display: block;
+  width: 2rem;
+  height: 2rem; /* Nice big tap target */
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu[enabled='true'] .burger-menu__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5rem 1.5rem 2rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background: var(--color-primary-shade);
+  overflow-y: auto; /* Set the vertical overflow to auto so long menus can be scrolled. */
+  -webkit-overflow-scrolling: touch;
+
+  /*
+  Make panel fill the screen.
+  */
+}
