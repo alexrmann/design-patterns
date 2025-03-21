@@ -102,4 +102,23 @@ main:focus {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+
+  /* Visually hides the link when it is not focused. Screen readers can still "see" it. */
+}
+
+.wrapper {
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  /* We specifically add left/right padding/margin here so other compositional CSS can comfortably manage vertical space, if needed. */
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 1em);
+
+  /* The flow utility provides flow and rhythm automatically between direct sibling elements. Where --flow-space is not defined: the default value is 1em, which equals the font size of the affected element. */
 }
