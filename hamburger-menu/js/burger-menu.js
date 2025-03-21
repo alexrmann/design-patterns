@@ -75,6 +75,37 @@ class BurgerMenu extends HTMLElement {
 
     this.innerHTML = this.initialMarkup;
   }
+
+  toggle(forcedStatus) {
+    if (forcedStatus) {
+      if (this.state.status === forcedStatus) {
+        return;
+      }
+
+      this.state.status = forcedStatus;
+    } else {
+      this.state.status = this.state.status === "closed" ? "open" : "closed";
+    }
+  }
+
+  processStateChange() {
+    this.root.setAttribute("status", this.state.status);
+    this.root.setAttribute("enabled", this.state.enabled ? "true" : "false");
+
+    this.manageFocus();
+
+    switch (this.state.status) {
+      case "closed":
+        this.trigger.setAttribute("aria-expanded", "false");
+        this.trigger.setAttribute("aria-label", "Open menu");
+        break;
+      case "open":
+      case "initial":
+        this.trigger.setAttribute("aria-expanded", "true");
+        this.trigger.setAttribute("aria-label", "Close menu");
+        break;
+    }
+  }
 }
 
 if ("customElements" in window) {
