@@ -1,3 +1,11 @@
+:root {
+    --color-light: #ffffff;
+    --color-light-shade: #fafffd;
+    --color-dark: #062726;
+    --color-primary: #d81159;
+    --color-primary-shade: #b90f4c;
+  }
+    
 html {
     background-color: #eeeeee;
 }
