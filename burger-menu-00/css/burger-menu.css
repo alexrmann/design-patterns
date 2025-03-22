@@ -217,12 +217,9 @@ main:focus {
   width: 24px;
   height: 3px;
   background: var(--color-light);
-  border: 1px solid var(--color-light);
   position: absolute;
-  border-radius: 3px;
   left: 50%;
   margin-left: -12px;
-  transition: transform 350ms ease-in-out;
 
   /*
   Style the innerHTML bars.
@@ -230,9 +227,9 @@ main:focus {
 }
 
 .burger-menu__bar {
-  top: 50%;
+  /* top: 50%; */
+  transition: background 10ms 300ms ease;
   transform: translateY(-50%);
-
   /*
   Position the .burger-menu__bar dead-center with absolute positioning, which allows us to comfortably animate it, knowing it won’t affect layout.
   */
@@ -246,10 +243,12 @@ main:focus {
 }
 
 .burger-menu__bar::before {
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
   top: -8px;
 }
 
 .burger-menu__bar::after {
+  transition: bottom 300ms 350ms ease, transform 300ms 50ms ease;
   bottom: -8px;
 }
 
@@ -341,17 +340,17 @@ You should experiment with the transformations until you are happy with it.
 */
 
 .burger-menu[enabled='true'][status='open'] .burger-menu__bar::before {
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
   top: 0;
   transform: rotate(45deg);
 }
 
 .burger-menu[enabled='true'][status='open'] .burger-menu__bar::after {
-  top: 0;
+  transition: bottom 300ms 50ms ease, transform 300ms 350ms ease;
+  bottom: 0;
   transform: rotate(-45deg);
 }
 
 .burger-menu[enabled='true'][status='open'] .burger-menu__bar {
   background: transparent;
-  border-color: transparent;
-  transform: rotate(180deg);
 }
