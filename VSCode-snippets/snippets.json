@@ -1,0 +1,22 @@
+{
+  "html": {
+    "snippets": {
+      "img:l": "img[width height loading='lazy']",
+      "page": "header>h1+nav:l^main+footer",
+      "nav:l": "nav[aria-label='${1:Main}']>ul>(li>a[aria-current='page']{${2:Current Page}})+(li*3>a{${0:Another Page}})",
+      "style:l": "style>{\\* \\{ box-sizing: border-box; \\}}+{\n${1:*}:focus \\{${2: outline: 2px solid red; }\\}}",
+      "meta:vp": "meta[name=viewport content='width=device-width, initial-scale=1.0']",
+      "meta:utf8": "meta[charset=${charset}]",
+      "!": "{<!DOCTYPE html>}+html[lang=${1}${lang}]>(head>meta:utf+meta:vp+{}+title{${2:New document}}+{}+style:l)+body>(h1>{${3:New Document}})+{${0}}",
+      "!!": "{<!DOCTYPE html>}+html[lang=${1}${lang}].no-js>(head>meta:utf+meta:vp+{}+{<!-- TODO: Change page title --> }+title{${1:🛑 Change me}}+{}+(script[type=\"module\"]>{document.documentElement.classList.replace('no-js', 'js');})+{}+link:css+link:print+{<!-- link:rss -->}+link:favicon+{}+{<!-- TODO: Change page description -->}+meta[name=\"description\"][content=\"${2:🛑 Change me (up to ~155 characters)}\"]+meta[name=\"theme-color\"][content=\"${2:#FF00FF}\"])+body>page",
+      "!!!": "{<!DOCTYPE html>}+{<!-- TODO: Check lang attribute --> }+html[lang=${1}${lang}].no-js>{}+(head>meta:utf8+meta:vp+{}+{<!-- TODO: Change page title --> }+title{${1:🛑 Change me}}+{}+(script[type=\"module\"]>{document.documentElement.classList.replace('no-js', 'js');})+{<!-- TODO: Add any external scripts and set the async or defer attribute --> }+{}+link:css+link:print+{}+{<!-- TODO: Change social media stuff --> }+meta[property=\"og:title\"][content=\"${1:🛑 Change me}\"]+meta[name=\"description\"][content=\"${2:🛑 Change me (up to ~155 characters)}\"]+meta[property=\"og:description\"][content=\"${2:🛑 Change me (up to ~155 characters)}\"]+meta[property=\"og:image\"][content=\"${1:https://}\"]+meta[property=\"og:locale\"][content=\"${1:en_US}\"]+meta[property=\"og:type\"][content=\"${1:website}\"]+meta[name=\"twitter:card\"][content=\"${1:summary_large_image}\"]+meta[property=\"og:url\"][content=\"${1:https://}\"]+{}+{<!-- TODO: Change canonical link --> }+link[rel=\"canonical\"][href=\"${1:https://}\"]+{}+{<!-- link:rss -->}+{}+{<!-- TODO: Modify Favicons -->}+link:favicon+link[rel=\"shortcut icon\"][href=\"${1:favicon.svg}\"][type=\"image/svg+xml\"]+link[rel=\"apple-touch-icon\"][href=\"${1:apple-touch-icon.png}\"]+{}+link[rel=\"manifest\"][href=\"${1:manifest.json}\"][type=\"application/json\"]+{}+meta[name=\"theme-color\"][content=\"${2:#FF00FF}\"]+{}+{<!-- TODO: Use these debug styles as needed -->}+style:l)+{}+body>page+{}+script:src[type=\"module\"]"
+    }
+  },
+  "css": {
+    "snippets": {
+      "debug": "outline: 5px solid red;\noutline-offset: -5px;",
+      "center": "display: flex;\njustify-content: center;\nalign-items: center;",
+      "sticky": "position: sticky;\ntop: ${1:0};\nleft: ${2:0};"
+    }
+  }
+}
