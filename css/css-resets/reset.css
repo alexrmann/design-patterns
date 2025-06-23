@@ -1,0 +1,128 @@
+/*  
+
+~~~~~~~~~~~~~~~~~~
+~~~ CSS RESETS ~~~
+~~~~~~~~~~~~~~~~~~
+
+Last updated: 6/21/2025
+
+Sources: 
+https://blog.logrocket.com/what-should-modern-css-boilerplate-look-like/
+https://css-tricks.com/box-sizing/
+
+*/
+
+@charset "UTF-8";
+
+/* Set current and legacy box model type. */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Pseudo elements inherit their parent's box model. */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Manage UI affordance differently by removing all border defaults . */
+* {
+  border: none;
+}
+
+/* Clear default browser padding and margin. */
+html,
+html * {
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevents images from blowing up their containers for absolutely no reason at all. Why? Because containers should contain! */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- Reset (most) lists ---
+
+Whether you’re using ordered lists (ol), unordered lists (ul), or menus (<menu>), it’s unlikely that you’ll want the list markers (i.e., bullets, numbers, etc.,) that come with them since they look rather unsightly on user interfaces. The following snippet removes them, but not from those used in articles where it makes sense to use them in their natural form: */
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+/* TIP: Add the role="list" attribute-value to all lists that you’d like screen readers to announce as such, because list-style: none; disables this ability in some web browsers. */
+
+/* Remove lists' default padding-left: */
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+
+/* Additionally, since list markers appear on the outside of lists, removing the padding using the snippet above can cause the list markers (the ones used in articles that we’re not resetting) to overlap neighboring content or overflow the viewport, so you’ll want to switch them to the inside instead: */
+article ol,
+article ul {
+  list-style-position: inside;
+}
+
+/* 
+---------------------------
+- ENHANCE LINK UNDERLINES -
+--------------------------- */
+a {
+  /* text-decoration: none; Uncomment to remove underlines */
+
+  text-underline-position: under; /* Places underlines below the descenders */
+
+  text-decoration-thickness: 8; /* Sets the thickness as a percentage of the font size */
+}
+
+/* Remove underline from footnotes */
+sub a,
+sup a,
+.footnote li a {
+  text-decoration: none;
+}
+
+/* Disable the text inflation algorithm */
+html {
+  -webkit-text-size-adjust: none; /* for iOS Safari */
+  text-size-adjust: none; /* for other mobile browsers */
+}
+
+/* Instead of instantly snapping to same-page anchors and text fragments, scroll-behavior: smooth; enables users to scroll to them smoothly. Also, to cater to those that prefer reduced motion for accessibility reasons, the rule is wrapped in a prefers-reduced-motion: no-preference media query. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* We set :focus styles globally by modifying how the outline looks. This means that any element that can receive focus, such as <a> and <button> will have a consistent focus style. The outline-offset pulls the outline away from the content a bit, which in my opinion, makes it more user-friendly. */
+:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 0.2rem;
+}
+
+/* REMOVE FOCUS OUTLINE FOR MOUSE USERS but keep it for keyboard users. */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ADD POINTER CURSOR to interactive elements that don’t already have an alternative cursor. */
+label,
+button,
+select,
+summary,
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
+  cursor: pointer;
+}
