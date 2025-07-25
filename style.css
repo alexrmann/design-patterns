@@ -163,10 +163,12 @@ summary,
   --font-size-4xl: 3rem;
 
   /* Project-specific fonts */
-  --font-sans: "Roboto", "Segoe UI", "Hind", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-sans: "Roboto", "Segoe UI", "Hind", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   --font-code: "Source Code Pro", monospace;
   --font-serif: "Source Serif 4", "Times New Roman", serif;
-  --font-headings: "Space Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-headings: "Space Grotesk", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   --font-body: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
