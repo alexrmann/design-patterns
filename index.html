@@ -14,18 +14,31 @@
       *:focus {
         outline: 2px solid red;
       }
+
+      .grid {
+        display: grid;
+        height: 100vh;
+        height: 100dvh;
+      }
+
+      .grid-center {
+        place-items: center;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Design Patterns Index</h1>
-      <nav aria-label="Main">
-        <ul>
-          <li><a href="" aria-current="page">Current Page</a></li>
-          <li><a href="/burger-menu/burger-menu-00">Burger Menu - Original</a></li>
-          <li><a href="/burger-menu/burger-menu-01">Burger Menu - alexrmann.com</a></li>
-        </ul>
-      </nav>
+    <header class="grid grid-center">
+      <div>
+        <h1>Design Patterns Index</h1>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href="/boilerplate">Boilerplate</a></li>
+            <li><a href="/components">Components</a></li>
+            <li><a href="/css">Stylesheets</a></li>
+            <li><a href="/layouts">Page Layouts</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main></main>
     <footer></footer>
