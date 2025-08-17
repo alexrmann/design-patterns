@@ -1,6 +1,12 @@
-/* TO DO: Need to make vertical layout card width narrow proportionately to screen width. */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Footer Tempate ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
 
-* {
+/* ~~~ Global Styles ~~~ */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
@@ -45,8 +51,8 @@ img {
 
 footer {
   height: 20vh;
-  margin: 4em 2em;
-  background: darkblue;
+  padding: 2em 4em;
+  background: #343434;
 }
 
 /* ~~~ Utility classes ~~~ */
@@ -97,5 +103,5 @@ footer {
   .img-card--row-reverse .flex-container {
     flex-direction: column-reverse;
   }
-  
+
 }
