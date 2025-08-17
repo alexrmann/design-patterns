@@ -84,20 +84,6 @@ footer {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* !!! Need to review the below !!! */
-
-.img-card--inner {
-  gap: 2em;
-}
-
-.txt-wrapper {
-  width: 30ch;
-}
-
-.img-wrapper {
-  flex: 0 0 400px;
-}
-
 /* ~~~ MEDIA QUERIES ~~~ */
 
 /* Tablets & Smaller */
