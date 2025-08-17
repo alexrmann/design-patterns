@@ -38,57 +38,87 @@ hr {
 }
 
 img {
+  color: black;
   background-color: #bcbcbc;
   display: grid;
   place-items: center;
-  width: 400px;
-  height: 300px;
   object-fit: contain;
   border: 2px solid black;
+  padding: 1em;
 }
 
-/* Begin footer styles */
+/* ~~~ Utility Classes ~~~ */
 
-footer {
-  height: 20vh;
-  width: 100%;
-  padding: 2em 4em;
-  background: #343434;
+/* Text Alignment */
+
+.text-right {
+  text-align: right;
 }
 
-/* ~~~ Utility classes ~~~ */
+/* Flexbox */
 
-.flexbox {
+.flex {
   display: flex;
-  gap: 5rem;
 }
 
-.flexbox--row {
+.flex--row {
   flex-direction: row;
 }
 
-.flexbox--row-reverse {
+.flex--row-reverse {
   flex-direction: row-reverse;
 }
 
-.flexbox-column {
+.flex--column {
   flex-direction: column;
-  align-items: center;
 }
 
-.flex-centered {
+.flex--centered {
   justify-content: center;
   align-items: center;
 }
 
-/* Project Classes */
+.flex--space-between {
+  justify-content: space-between;
+}
+
+.flex--gap-sm {
+  gap: 2rem;
+}
+
+.flex--gap-md {
+  gap: 4rem;
+}
+
+.flex--gap-lg {
+  gap: 6rem;
+}
+
+/* ~~~ Project Classes ~~~ */
+
+/* Footer Component Styles */
+
+footer {
+  min-height: 20vh;
+  width: 100%;
+  padding: 4em;
+  background: #343434;
+  color: #ddd
+}
+
+footer a {
+  color: gold;
+}
 
 .masthead {
-  height: auto;
-  padding: 3em;
-  background: #efefef;
-  border-radius: 1em;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+  width: 100%;
+}
+
+.logo {}
+
+.logo-container {
+  aspect-ratio: 3/4;
 }
 
 /* ~~~ MEDIA QUERIES ~~~ */
@@ -97,12 +127,24 @@ footer {
 
 @media only screen and (max-width: 768px) {
 
-  .img-card--row .flex-container {
+  .flex {
     flex-direction: column;
   }
 
-  .img-card--row-reverse .flex-container {
-    flex-direction: column-reverse;
+  .masthead {
+    text-align: center;
   }
 
+  .logo-container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+
+}
+
+/* ~~~ Debug Styles ~~~ */
+
+.debug-border {
+  border: 1px solid salmon;
 }
