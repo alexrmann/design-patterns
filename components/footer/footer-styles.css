@@ -89,6 +89,7 @@ footer {
 /* Tablets & Smaller */
 
 @media only screen and (max-width: 768px) {
+
   .img-card--row .flex-container {
     flex-direction: column;
   }
@@ -96,21 +97,5 @@ footer {
   .img-card--row-reverse .flex-container {
     flex-direction: column-reverse;
   }
-
-  .img-card h3,
-  .img-card p {
-    text-align: left;
-  }
-
-  .img-card--inner {
-    gap: 2em;
-  }
-
-  .txt-wrapper {
-    width: 400px;
-  }
-
-  .img-wrapper {
-    flex-basis: 300px;
-  }
+  
 }
