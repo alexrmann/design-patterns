@@ -20,8 +20,8 @@ html {
 body {
   min-height: 100vh;
   background-color: #ddd;
-  display: grid;
-  place-items: center;
+  display: flex; /* grid also works */
+  place-items: end;
 }
 
 h3 {
@@ -38,70 +38,169 @@ hr {
 }
 
 img {
+  color: black;
   background-color: #bcbcbc;
   display: grid;
   place-items: center;
-  width: 400px;
-  height: 300px;
   object-fit: contain;
   border: 2px solid black;
+  padding: 1em;
 }
 
-/* Begin footer styles */
+/* ~~~ Utility Classes ~~~ */
 
-footer {
-  height: 20vh;
-  padding: 2em 4em;
-  background: #343434;
+/* Margin */
+
+.margin-left--auto {
+  /* Pushes content to the right edge of container */
+  margin-left: auto;
 }
 
-/* ~~~ Utility classes ~~~ */
+.margin-right--auto {
+  /* Pushes content to the left edge of container */
+  margin-right: auto;
+}
 
-.flexbox {
+/* Text Alignment */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* ~~~~~~~ */
+/* FLEXBOX */
+/* ~~~~~~~ */
+
+.flex {
   display: flex;
-  gap: 5rem;
 }
 
-.flexbox--row {
+.flex--row {
   flex-direction: row;
 }
 
-.flexbox--row-reverse {
+.flex--row-reverse {
   flex-direction: row-reverse;
 }
 
-.flexbox-column {
+.flex--column {
   flex-direction: column;
-  align-items: center;
 }
 
-.flex-centered {
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--space-between {
+  justify-content: space-between;
+}
+
+/* Flex Centering */
+
+.flex--center {
   justify-content: center;
   align-items: center;
 }
 
-/* Project Classes */
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
 
-.masthead {
-  height: auto;
-  padding: 3em;
-  background: #efefef;
-  border-radius: 1em;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* ~~~~ */
+/* GRID */
+/* ~~~~ */
+
+.grid {
+  display: grid;
+}
+
+/* Grid Centering */
+
+.grid-center {
+  place-items: center;
+}
+
+.self-center {
+  place-self: center;
+}
+
+/* Centering without Flex or Grid */
+
+.center-horizontal {
+  /* Center Horizontal-Only */
+  margin: 0 auto;
+}
+
+.center-vertical {
+  /* Center Vertical-Only */
+  display: block;
+  align-content: center;
+}
+
+/* Gap */
+
+.gap-xxs {
+  gap: 0.5rem;
+}
+
+.gap-xs {
+  gap: 1rem;
+}
+
+.gap-sm {
+  gap: 2rem;
+}
+
+.gap-md {
+  gap: 4rem;
+}
+
+.gap-lg {
+  gap: 6rem;
+}
+
+.gap-xl {
+  gap: 8rem;
+}
+
+.gap-xxl {
+  gap: 10rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Project Classes ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Footer Component Styles */
+
+footer {
+  min-height: 20vh;
+  width: 100%;
+  padding: 4em;
+  background: #343434;
+  color: #ddd
+}
+
+footer a {
+  color: gold;
+}
+
+.logo-container {
+  aspect-ratio: 3/4;
 }
 
 /* ~~~ MEDIA QUERIES ~~~ */
-
-/* Tablets & Smaller */
-
-@media only screen and (max-width: 768px) {
-
-  .img-card--row .flex-container {
-    flex-direction: column;
-  }
-
-  .img-card--row-reverse .flex-container {
-    flex-direction: column-reverse;
-  }
-
-}

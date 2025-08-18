@@ -5,20 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/css/css-resets/reset.css">
+  <link rel="stylesheet" href="/css/css-debug/debug.css">
+  <link rel="stylesheet" href="footer-styles.css">
 </head>
 
 <body>
 
   <footer>
-    <section class="masthead container grid">
+    <section class="flex flex--wrap gap-md">
 
-      <div class="logo"></div>
+      <section class="masthead flex flex--wrap gap-sm">
 
-      <div class="contact-info"></div>
+        <div class="logo-container">
+          <img src="" alt="Logo alt text" width="300" height="400" class="logo"></img>
+        </div>
+
+        <address class="contact-info">
+          <ul>
+            <li>123 Main St.<br>Anytown, USA 99999</li>
+            <li><a href="tel:+05890000111">(589) 000-0111</a></li>
+            <li><a href="mailto:address@email.com">Email Us</a></li>
+          </ul>
+        </address>
+      </section>
+
+      <nav class="footer-links" aria-label="Main">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/people">People</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
 
     </section>
   </footer>
 
 </body>
+
 </html>
