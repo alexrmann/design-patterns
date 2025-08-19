@@ -42,6 +42,12 @@ html * {
   margin: 0;
 }
 
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
 /* Prevents images from blowing up their containers for absolutely no reason at all. Why? Because containers should contain! */
 img,
 picture {
@@ -49,9 +55,7 @@ picture {
   max-width: 100%;
 }
 
-/* --- Reset (most) lists ---
-
-Whether you’re using ordered lists (ol), unordered lists (ul), or menus (<menu>), it’s unlikely that you’ll want the list markers (i.e., bullets, numbers, etc.,) that come with them since they look rather unsightly on user interfaces. The following snippet removes them, but not from those used in articles where it makes sense to use them in their natural form: */
+/* --- Reset (most) lists --- Whether you’re using ordered lists (ol), unordered lists (ul), or menus (<menu>), it’s unlikely that you’ll want the list markers (i.e., bullets, numbers, etc.,) that come with them since they look rather unsightly on user interfaces. The following snippet removes them, but not from those used in articles where it makes sense to use them in their natural form: */
 menu:not(article menu),
 ol:not(article ol),
 ul:not(article ul) {

@@ -1,0 +1,17 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Footer Tempate ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Footer Component Styles */
+
+section {
+  min-height: 20vh;
+  width: 100%;
+  padding: 4em;
+  background: #343434;
+  color: #ddd
+}
+
+section a {
+  color: gold;
+}
