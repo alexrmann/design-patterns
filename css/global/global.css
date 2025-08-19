@@ -62,6 +62,7 @@ html {
 }
 
 body {
+  background-color: #ddd;
   font-weight: 400;
 }
 
@@ -188,6 +189,9 @@ pre code:after {
 }
 
 /*  ~~ Horizontal Rule ~~  */
+/* Determine best practice between border styling vs. background styling. */
+
+/* Background styling */
 hr {
   border: 0;
   clear: both;
@@ -196,6 +200,11 @@ hr {
   background-color: black;
   height: 2px;
   margin: 1.75em 0;
+}
+
+/* Border styling */
+hr {
+  border: 1px solid black;
 }
 
 /*  ~~ Hyperlinks ~~  */
@@ -287,4 +296,16 @@ th {
 tr,
 td {
   border: 0;
+}
+
+/* ~~ Images ~~ */
+
+img {
+  color: black;
+  background-color: #bcbcbc;
+  display: grid;
+  place-items: center;
+  object-fit: contain;
+  border: 2px solid black;
+  padding: 1em;
 }
