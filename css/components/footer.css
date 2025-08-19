@@ -1,0 +1,21 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ Footer Tempate ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Footer Component Styles */
+
+footer {
+  min-height: 20vh;
+  width: 100%;
+  padding: 4em;
+  background: #343434;
+  color: #ddd
+}
+
+footer a {
+  color: gold;
+}
+
+.logo-container {
+  aspect-ratio: 3/4;
+}
