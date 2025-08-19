@@ -58,18 +58,16 @@
 
 /* Flex Centering */
 
-.flex--center {
+.flex--center-x {
+  justify-content: center;
+}
+
+.flex--center-xy {
   justify-content: center;
   align-items: center;
 }
 
-.flex--center {
-  justify-content: center;
-  align-items: center;
-}
-
-.flex--center {
-  justify-content: center;
+.flex--center-y {
   align-items: center;
 }
 
@@ -83,11 +81,11 @@
 
 /* Grid Centering */
 
-.grid-center {
+.grid--center {
   place-items: center;
 }
 
-.self-center {
+.self--center {
   place-self: center;
 }
 
