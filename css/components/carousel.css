@@ -1,0 +1,40 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~ img-full Tempate ~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* img-full Component Styles */
+
+/* Grid area classes */
+.img-full { 
+  display: block;
+  grid-area: img-full;
+}
+.thumbnails { 
+  display: block;
+  grid-area: thumbnails;
+}
+
+section {
+  min-height: 20vh;
+  width: 100%;
+  padding: 4em;
+  background: #343434;
+  color: #ddd
+}
+
+.carousel {
+  display: grid;
+  grid-template-areas:
+  'img-full img-full img-full img-full thumbnails'
+  'img-full img-full img-full img-full thumbnails'
+  'img-full img-full img-full img-full thumbnails';
+  grid-gap: 10px;
+  background-color: #2196F3;
+}
+
+.carousel > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

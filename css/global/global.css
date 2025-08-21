@@ -125,7 +125,6 @@ p,
 ul,
 ol {
   font-family: var(--font-body);
-  font-size: var(--font-size-md);
 }
 
 /*  ~~ List Items ~~  */

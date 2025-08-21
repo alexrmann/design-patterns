@@ -12,10 +12,20 @@ footer {
   color: #ddd
 }
 
+footer ul {
+  margin-bottom: 0;
+}
+
 footer a {
   color: gold;
 }
 
 .logo-container {
   aspect-ratio: 3/4;
+  max-width:100%;
+  max-height:100%;
+}
+
+.contact-info {
+  align-self: flex-end
 }
