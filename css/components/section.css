@@ -19,11 +19,3 @@ section a {
 section h2 {
   color: whitesmoke;
 }
-
-/* Containers */
-
-.container--main {
-    width: 80%;
-    max-width: 1600px;
-    margin: 0 auto;
-}
