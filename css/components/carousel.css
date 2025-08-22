@@ -3,14 +3,21 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Grid area classes */
-/* .img-full { 
+
+.img-full { 
   display: block;
   grid-area: img-full;
 }
 .thumbnails { 
   display: block;
   grid-area: thumbnails;
-} */
+}
+.caption { 
+  grid-area: caption;
+}
+.empty {
+  grid-area: empty;
+}
 
 section {
   min-height: 20vh;
@@ -20,25 +27,29 @@ section {
   color: #ddd
 }
 
-/* .carousel {
+.carousel {
   display: grid;
+  grid-template-columns: 768px 1fr;
+  grid-template-rows: 20px;
   grid-template-areas:
   'img-full img-full img-full img-full thumbnails'
   'img-full img-full img-full img-full thumbnails'
-  'img-full img-full img-full img-full thumbnails';
-  grid-gap: 10px;
-  background-color: #2196F3;
+  'img-full img-full img-full img-full thumbnails'
+  'caption caption caption caption empty';
+  grid-gap: 1rem;
 }
 
 .carousel > div {
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-} */
+}
+
+img.thumbnail {
+  display: block;
+  aspect-ratio: 4/3;
+}
 
 /* ~~~~~~~~~~~~~~~~~~ New Styles from CodePen ~~~~~~~~~~~~~~~~~ */
-section {
+/* section {
   padding: 50px 0;
 }
 
@@ -215,4 +226,4 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
