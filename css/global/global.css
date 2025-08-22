@@ -304,12 +304,12 @@ td {
 
 /* ~~ Images ~~ */
 
+/* This will set a basic display when an image is not available. */
 img {
   color: black;
   background-color: #bcbcbc;
   display: grid;
   place-items: center;
   object-fit: contain;
-  border: 2px solid black;
   padding: 1em;
 }

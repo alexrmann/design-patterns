@@ -14,37 +14,46 @@
 
 <body>
 
-<!-- ~~~~~~~~~~~~~ Carousel built with CSS Grid ~~~~~~~~~~~~~ -->
+  <!-- ~~~~~~~~~~~~~ Carousel built with CSS Grid ~~~~~~~~~~~~~ -->
   <section>
 
     <div class="container--main">
       <h2>Section Heading</h2>
 
-      <div class="flex flex--center-x" style="margin-bottom: 2rem;">
-      
-        <div class="carousel">
-          <div class="img-full">
-            <figcaption>Caption</figcaption>
-          </div>
-          <div class="thumbnails">
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-          </div>
-          <div class="caption" style="color: black;">
-            Blah blah blah caption
-          </div>
-          <div class="empty">
 
+        <div class="carousel">
+
+          <figure class="img-full">
+            <img src="" alt="Full Image">
+            <figcaption>This caption is 50 characters wide with a maximum width of 100%. As the figure shrinks to less than 50ch, the caption will scale with the figure. It can continue on for many lines, so another solution is needed to push the content below down as the caption length increases.</figcaption>
+          </figure>
+
+          <div class="thumbnails">
+            <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img>
+
+            <!-- Adding more thumbnails currently forces the carousel full image to scale with the height imposed by the thumbnails stacking. -->
+            <!-- 
+            <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img> 
+            -->
           </div>
+
         </div>
-      
-      </div>
-      <p>This section will center the main group of content. As the viewport width shrinks, interior items will wrap to the start of their container.</p>
+
+
+      <p>This section will center the main group of content. As the viewport width shrinks, interior items will wrap to
+        the start of their container.</p>
     </div>
-    
+
+    </div>
+
   </section>
 
 </body>
