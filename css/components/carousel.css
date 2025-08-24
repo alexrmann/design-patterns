@@ -2,6 +2,7 @@
 /* ~~~ Carousel Style Template ~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
 section {
   min-height: 20vh;
@@ -11,12 +12,20 @@ section {
   color: #ddd
 }
 
+section hgroup p {
+  font-size: var(--font-size-2xl);
+}
+
+.first-paragraph {
+  font-size: var(--font-size-lg);
+}
+
 .carousel {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 1rem 0;
-  margin-bottom: 8em;
+  margin-bottom: calc(var(--figcaption-h, 8em) + 4em);
 }
 
 /* Enlarged Figure */

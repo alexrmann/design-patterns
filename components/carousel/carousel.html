@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Section Template</title>
+
+  <!-- Preload Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+  <!-- Load Stylesheets -->
   <link rel="stylesheet" href="/css/resets/reset.css">
   <link rel="stylesheet" href="/css/utilities/utilities.css">
   <link rel="stylesheet" href="/css/global/global.css">
@@ -18,34 +25,39 @@
   <section>
 
     <div class="container--main">
-      <h2>Section Heading</h2>
+      <hgroup id="document-title">
+        <h2 style="margin-bottom: 0;">Carousel</h2>
+        <p role="doc-subtitle" class="subtitle">CSS Grid Carousel</p>
+      </hgroup>
+      <p class="first-paragraph">Some intro to the document.</p>
 
+      <div class="carousel">
 
-        <div class="carousel">
+        <figure class="img-full">
+          <img src="" alt="Full Image">
+          <figcaption>This caption is 50 characters wide with a maximum width of 100%. As the figure shrinks to less
+            than 50ch, the caption will scale with the figure. It can continue on for many lines, so another solution is
+            needed to push the content below down as the caption length increases.</figcaption>
+        </figure>
 
-          <figure class="img-full">
-            <img src="" alt="Full Image">
-            <figcaption>This caption is 50 characters wide with a maximum width of 100%. As the figure shrinks to less than 50ch, the caption will scale with the figure. It can continue on for many lines, so another solution is needed to push the content below down as the caption length increases.</figcaption>
-          </figure>
+        <div class="thumbnails">
+          <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img>
 
-          <div class="thumbnails">
-            <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
-            <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
-            <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
-            <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
-            <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img>
-
-            <!-- Adding more thumbnails currently forces the carousel full image to scale with the height imposed by the thumbnails stacking. -->
-            <!-- 
+          <!-- Adding more thumbnails currently forces the carousel full image to scale with the height imposed by the thumbnails stacking. -->
+          <!-- 
             <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
             <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
             <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
             <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
             <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img> 
             -->
-          </div>
-
         </div>
+
+      </div>
 
 
       <p>This section will center the main group of content. As the viewport width shrinks, interior items will wrap to
