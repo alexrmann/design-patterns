@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- TODO: Check lang attribute -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ARIA Landmarks Example</title>
+
+    <script type="module">
+      document.documentElement.classList.replace("no-js", "js");
+    </script>
+    <!-- TODO: Add any external scripts and set the async or defer attribute -->
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+
+    <!-- TODO: Change social media stuff -->
+    <meta property="og:title" content="🛑 Change me" />
+    <meta name="description" content="🛑 Change me (up to ~155 characters)" />
+    <meta
+      property="og:description"
+      content="This represents a boilerplate HTML index file with syntactic ARIA landmarks."
+    />
+    <meta property="og:image" content="https://" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://" />
+
+    <!-- TODO: Change canonical link -->
+    <link rel="canonical" href="https://" />
+
+    <!-- link:rss -->
+
+    <!-- TODO: Modify Favicons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link rel="manifest" href="manifest.json" type="application/json" />
+
+    <meta name="theme-color" content="#FF00FF" />
+
+    <!-- TODO: Use these debug styles as needed
+  <style>
+    * { box-sizing: border-box; }
+    
+    *:focus { outline: 2px solid red; }
+  </style> -->
+  </head>
+
+  <body>
+    <header>
+      <div>
+        This represents a boilerplate HTML index file with syntactic ARIA
+        landmarks.
+      </div>
+      <div>
+        This <code>header</code>, which is outside the
+        <code>main</code> element, is automatically given the
+        <code>role="banner"</code> attribute
+      </div>
+      <nav aria-label="Main">
+        <div>Screen readers will read out the</div>
+        <ul>
+          <li><a href="" aria-current="page">Current Page</a></li>
+          <li><a href="">Another Page</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>ARIA Landmarks</h1>
+      <p>
+        The <code>h1</code> element should be situated within the
+        <code>main</code> element.
+      </p>
+      <section aria-labelledby="regions">
+        <h2 id="regions">Region Landmarks</h2>
+        <p>
+          Regions can be labeled based on their first child heading using the
+          <code>aria-labelledby</code> attribute on the section element. The
+          label must match the <code>id</code> attribute of the child heading.
+        </p>
+        <p>
+          This section uses its <code>h2</code> element with
+          <code>id="regions"</code>. Consequently, the section has the attribute
+          <code>aria-labelledby="regions"</code>.
+        </p>
+        <h3>Design Patterns</h3>
+        <ul>
+          <li>A <code>region</code> landmark must have a label.</li>
+          <li>
+            If a page includes more than one <code>region</code> landmark, each
+            should have a unique label.
+          </li>
+          <li>
+            The <code>region</code> landmark can be used identify content that
+            named landmarks do not appropriately describe.
+          </li>
+        </ul>
+      </section>
+      <section></section>
+    </main>
+    <aside>
+      <h2>Complementary Landmarks</h2>
+      <p>
+        The HTML <code>aside</code> element represents a portion of a document
+        whose content is only indirectly related to the document’s main content.
+        Given its indirect relationship to <code>main</code>, it should not be
+        contained within the <code>main</code> content.
+      </p>
+      <h3>Design Patterns</h3>
+      <ul>
+        <li>
+          <code>complementary</code> landmarks should be top level landmarks
+          (e.g. not contained within any other landmarks).
+        </li>
+        <li>
+          If the complementary content is not related to the main content, a
+          more general role should be assigned (e.g. <code>region</code>).
+        </li>
+        <li>
+          If a page includes more than one <code>complementary</code> landmark,
+          each should have a unique label.
+        </li>
+      </ul>
+    </aside>
+    <footer>
+      <p>
+        The HTML footer element defines a <code>contentinfo</code> landmark when
+        its context is the body element.
+      </p>
+      <section aria-labelledby="contentinfo">
+        <h2 id="contentinfo">Contentinfo Landmark</h2>
+        <p>
+          The HTML footer element defines a contentinfo landmark by default when
+          its context is the body element.
+        </p>
+        <p>
+          The HTML footer element is not considered a contentinfo landmark when
+          it is descendant of any of following elements:
+        </p>
+        <ul>
+          <li>article</li>
+          <li>aside</li>
+          <li>main</li>
+          <li>nav</li>
+          <li>section</li>
+        </ul>
+      </section>
+      <section aria-labelledby="reference">
+        <h2 id="reference">References</h2>
+        <p>
+          This boilerplate ARIA landmarks example is based on the following
+          sources:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/general-principles.html"
+              >ARIA Landmarks Example</a
+            >
+            from the World Wide Web Consortium
+          </li>
+          <li>
+            <a
+              href="https://www.tempertemper.net/blog/page-headings-dont-belong-in-the-header"
+              >Page Headings Don't Belong in the Header</a
+            >
+            by tempertemper
+          </li>
+        </ul>
+      </section>
+    </footer>
+
+    <!-- TODO: Add or remove JavaScript
+   
+  <script src="" type="module"></script> -->
+  </body>
+</html>
