@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Section Template</title>
+
+  <!-- Preload Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+  <!-- Load Stylesheets -->
   <link rel="stylesheet" href="/css/resets/reset.css">
   <link rel="stylesheet" href="/css/utilities/utilities.css">
   <link rel="stylesheet" href="/css/global/global.css">
@@ -13,136 +20,53 @@
 </head>
 
 <body>
-  <!-- <section>
 
-    <div class="container--main">
-      <h2>Section Heading</h2>
-
-      <div class="flex flex--center-x" style="margin-bottom: 2rem;">
-      
-        <div class="grid">
-          <div class="img-full">
-            <img class="img-full" src="" alt="Image alt text" class="logo"></img>
-          </div>
-          <div class="thumbnails">
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-            <img class="thumbnail" src="" alt="Image alt text" class="logo"></img>
-          </div>
-        </div>
-      
-      </div>
-      <p>This section will center the main group of content. As the viewport width shrinks, interior items will wrap to the start of their container.</p>
-    </div>
-    
-  </section> -->
-
-<!-- ~~~~~~~~~~~~~ New markup from CodePen ~~~~~~~~~~~~~ -->
-
+  <!-- ~~~~~~~~~~~~~ Carousel built with CSS Grid ~~~~~~~~~~~~~ -->
   <section>
 
-    <div class="container">
+    <div class="container--main">
+      <hgroup id="document-title">
+        <h2 style="margin-bottom: 0;">Carousel</h2>
+        <p role="doc-subtitle" class="subtitle">CSS Grid Carousel</p>
+      </hgroup>
+      <p class="first-paragraph">Some intro to the document.</p>
 
-        <div class="carousel">
-            <input type="radio" name="slides" checked="checked" id="slide-1">
-            <input type="radio" name="slides" id="slide-2">
-            <input type="radio" name="slides" id="slide-3">
-            <input type="radio" name="slides" id="slide-4">
-            <input type="radio" name="slides" id="slide-5">
-            <input type="radio" name="slides" id="slide-6">
-            <ul class="carousel__slides">
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1041/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Tim Marshall</span>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1043/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Christian Joudrey</span>                            
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1044/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Steve Carter</span>                            
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1045/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Aleksandra Boguslawska</span>                            
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1049/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Rosan Harmens</span>                            
-                        </figcaption>
-                    </figure>
-                </li>
-                <li class="carousel__slide">
-                    <figure>
-                        <div>
-                            <img src="https://picsum.photos/id/1052/800/450" alt="">
-                        </div>
-                        <figcaption>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <span class="credit">Photo: Annie Spratt</span>                            
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>    
+      <div class="carousel">
 
-            <ul class="carousel__thumbnails">
-                <li>
-                    <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
-                </li>
-                <li>
-                    <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
-                </li>
-            </ul>
+        <figure class="img-full">
+          <img src="" alt="Full Image">
+          <figcaption>This caption is 50 characters wide with a maximum width of 100%. As the figure shrinks to less
+            than 50ch, the caption will scale with the figure. It can continue on for many lines, so another solution is
+            needed to push the content below down as the caption length increases.</figcaption>
+        </figure>
 
+        <div class="thumbnails">
+          <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
+          <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img>
+
+          <!-- Adding more thumbnails currently forces the carousel full image to scale with the height imposed by the thumbnails stacking. -->
+          <!-- 
+            <img class="thumbnail" src="" alt="Thumbnail-1" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-2" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-3" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-4" class="logo"></img>
+            <img class="thumbnail" src="" alt="Thumbnail-5" class="logo"></img> 
+            -->
         </div>
+
+      </div>
+
+
+      <p>This section will center the main group of content. As the viewport width shrinks, interior items will wrap to
+        the start of their container.</p>
     </div>
-</section>
+
+    </div>
+
+  </section>
 
 </body>
 
