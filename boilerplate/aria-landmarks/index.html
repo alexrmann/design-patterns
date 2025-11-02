@@ -70,11 +70,14 @@
       </nav>
     </header>
     <main>
-      <h1>ARIA Landmarks</h1>
-      <p>
-        The <code>h1</code> element should be situated within the
-        <code>main</code> element.
-      </p>
+      <hgroup aria-label="Heading">
+        <h1>ARIA Landmarks</h1>
+        <p>
+          The <code>h1</code> element should be situated within the
+          <code>main</code> element.
+        </p>
+      </hgroup>
+
       <section aria-labelledby="regions">
         <h2 id="regions">Region Landmarks</h2>
         <p>
@@ -134,11 +137,12 @@
       <section aria-labelledby="contentinfo">
         <h2 id="contentinfo">Contentinfo Landmark</h2>
         <p>
-          The HTML footer element defines a contentinfo landmark by default when
+          The HTML footer element defines a <code>contentinfo</code>
+           landmark by default when
           its context is the body element.
         </p>
         <p>
-          The HTML footer element is not considered a contentinfo landmark when
+          The HTML footer element is not considered a <code>contentinfo</code> landmark when
           it is descendant of any of following elements:
         </p>
         <ul>
