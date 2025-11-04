@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<!-- 
+  <!-- 
 
 From MDN Blog, "Using HTML landmark roles to improve accessibility"
 Original tutorial available at:
@@ -20,6 +19,13 @@ https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/
       <a class="logo" href="/">
         <span class="visually-hidden">Mr. Pineapple's Pizzeria</span>
       </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a aria-current="page" href="/">Home</a></li>
+          <li><a href="/menu">Our pizzas</a></li>
+          <li><a href="/contact">Get in touch</a></li>
+        </ul>
+      </nav>
     </header>
   </body>
 </html>
