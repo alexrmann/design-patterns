@@ -61,5 +61,23 @@ https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/
         <li><a href="/fromage">Fromage</a></li>
       </ul>
     </aside>
+    <div class="newsletter">
+      <h3 id="newsletter-subscribe-form">Subscribe to Mr. Pineapple's newsletter</h3>
+      <p>
+        In our newsletter, you can expect even more wonderful pizza recipes, all
+        featuring the versatile pineapple.
+      </p>
+      <form
+        aria-labelledby="newsletter-subscribe-form"
+        name="newsletter"
+        action="/subscribe"
+        type="post"
+      >
+        <label for="email">Please provide your email address</label>
+        <input type="email" id="email" name="email" />
+
+        <button type="submit">Pineapple Me 🍍</button>
+      </form>
+    </div>
   </body>
 </html>
