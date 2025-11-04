@@ -37,9 +37,10 @@ https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/
       </search>
     </header>
     <main>
+      <!-- Landmarks are meant to identify key areas of a page a user would most likely be interested in and would want to navigate to. Therefore, be mindful when deciding which areas of your page should be highlighted as a landmark. -->
       <section aria-labelledby="our-pizzas">
         <h2 id="our-pizzas">Our pizzas</h2>
-        <!-- Landmarks are meant to identify key areas of a page a user would most likely be interested in and would want to navigate to. Therefore, be mindful when deciding which areas of your page should be highlighted as a landmark. -->
+        <!-- In rare cases where there is no heading to associate with the <section> element, you can also use the aria-label attribute to achieve the same end result. -->
         <p>
           All our pizzas come with the best pizza topping in the world.
           Pineapple!
