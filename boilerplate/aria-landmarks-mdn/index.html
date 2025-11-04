@@ -30,12 +30,26 @@ https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/
         <form name="site-search" action="/search" method="get">
           <label for="query">Find your perfect pizza</label>
           <input type="search" id="query" name="query" />
-          
+
           <!-- Optional submit button -->
           <input type="submit" value="Search" />
         </form>
       </search>
     </header>
-    <main></main>
+    <main>
+      <section aria-labelledby="our-pizzas">
+        <h2 id="our-pizzas">Our pizzas</h2>
+        <!-- Landmarks are meant to identify key areas of a page a user would most likely be interested in and would want to navigate to. Therefore, be mindful when deciding which areas of your page should be highlighted as a landmark. -->
+        <p>
+          All our pizzas come with the best pizza topping in the world.
+          Pineapple!
+        </p>
+        <ul>
+          <li>Margherita with pineapple</li>
+          <li>Veggie with pineapple</li>
+          <li>Meaty with pineapple</li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
