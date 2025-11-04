@@ -1,26 +1,29 @@
 body {
   height: 100vh;
   height: 100dvh;
-  background-image: 
-    light-dark(
-      linear-gradient(#d4d7de), 
-      linear-gradient(#293558)
-    );
+  background-image: light-dark(
+    linear-gradient(#d4d7de),
+    linear-gradient(#293558)
+  );
   border: 8px solid light-dark(#3e5085, #d4d7de);
 }
 
-/* For this to work with light-dark mode, Javascript is necessary to inject the correct background class. Otherwise, the "light" gradient class will function */
-
-.background-gradient-light {
+.background-gradient {
   height: 100%;
-  background-image: radial-gradient(#566db0 30%, #293558);
-  mix-blend-mode: luminosity;
-  opacity: .5;
 }
 
-.background-gradient-dark {
-  height: 100%;
-  background-image: radial-gradient(#293558 30%, #566db0);
-  mix-blend-mode: difference;
-  opacity: 0.25;
+@media (prefers-color-scheme: light) {
+  .background-gradient {
+    background-image: radial-gradient(#566db0 30%, #293558);
+    mix-blend-mode: hard-light; /* Not functional at this time */
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .background-gradient {
+    background-image: radial-gradient(#293558 30%, #566db0);
+    mix-blend-mode: difference; /* Not functional at this time */
+    opacity: 0.25;
+  }
 }
