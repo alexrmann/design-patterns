@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Turn on light and dark mode -->
+    <meta name="color-scheme" content="light dark" />
+    <!-- Base style and gradients -->
+    <link rel="stylesheet" href="/scripts/light-dark/light-dark.css" />
+  </head>
+  <body>
+    <h1>Light / Dark Mode</h1>
+    <!-- BUTTONS -->
+    <h2>Buttons</h2>
+    <p>
+      <button id="autoSwitch" type="button" onclick="switchAuto()">Auto</button>
+      <button id="lightSwitch" type="button" onclick="switchLight()">
+        Light
+      </button>
+      <button id="darkSwitch" type="button" onclick="switchDark()">Dark</button>
+    </p>
+
+    <!-- RADIOS -->
+    <h2>Radios</h2>
+    <fieldset>
+      <legend>Select a color mode:</legend>
+      <div>
+        <input
+          onchange="switchAuto()"
+          type="radio"
+          id="auto"
+          name="mode"
+          value="auto"
+          checked
+        />
+        <label for="auto">Auto</label>
+      </div>
+      <div>
+        <input
+          onchange="switchLight()"
+          type="radio"
+          id="light"
+          name="mode"
+          value="light"
+        />
+        <label for="light">Light</label>
+      </div>
+      <div>
+        <input
+          onchange="switchDark()"
+          type="radio"
+          id="dark"
+          name="mode"
+          value="dark"
+        />
+        <label for="dark">Dark</label>
+      </div>
+    </fieldset>
+
+    <!-- SELECT -->
+    <h2>Select</h2>
+    <p>
+      <label for="lightdark">Mode:</label>
+      <select onchange="switchMode(this.value)" id="lightdark">
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </p>
+    <script src="light-dark-localStorage.js"></script>
+  </body>
+</html>

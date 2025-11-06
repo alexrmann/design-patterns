@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Turn on light and dark mode -->
+    <meta name="color-scheme" content="light dark" />
+    <!-- Base style and gradients -->
+    <link rel="stylesheet" href="/scripts/light-dark/light-dark.css" />
+  </head>
+  <body>
+    <p>
+      <label for="lightdark">Mode:</label>
+      <select onchange="switchMode(this.value)" id="lightdark">
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </p>
+    <script src="light-dark-select.js">
+    </script>
+  </body>
+</html>

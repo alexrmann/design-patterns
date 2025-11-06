@@ -1,0 +1,8 @@
+:root {
+  color-scheme: light dark;
+}
+
+h1, h2, p, fieldset {
+  width: max-content;
+  margin: 3rem auto;
+}
