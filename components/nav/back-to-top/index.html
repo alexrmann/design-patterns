@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Back to Top</title>
+    <link rel="stylesheet" href="/style.css" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -23,9 +24,25 @@
         width: 700px;
       }
 
-      header, footer {
+      header,
+      footer {
         height: 300px;
         background-color: dimgray;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 0;
+      }
+
+      h1 {
+        margin-top: 1em;
+        font-weight: 700;
+      }
+
+      h1 span {
+        font-weight: 500;
       }
 
       #back-to-top {
@@ -38,14 +55,19 @@
         border: 2px solid black;
         background-color: white;
       }
+
+      #back-to-top:hover {
+        color: white;
+        background-color: var(--color-highlight);
+      }
+      
     </style>
   </head>
   <body>
     <div class="container">
-      <a name="top"></a>
       <header></header>
       <main>
-        <h1>Back to Top</h1>
+        <h1>Jump Link: <span>Back to Top</span></h1>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium,
           cumque sint suscipit nesciunt non illum sequi delectus! Nulla quisquam
@@ -135,6 +157,10 @@
       </main>
       <footer></footer>
     </div>
-    <div id="back-to-top"><a href="#top">Back To Top</a></div>
+    <!-- Note: You can use href="#top" or the empty fragment (href="#") to link to the top of the current page, as defined in the HTML specification. -->
+    <a id="back-to-top--link" href="#top">
+    <div id="back-to-top" role="navigation" aria-labelledby="back-to-top--link">
+      Back To Top
+    </div></a>
   </body>
 </html>
