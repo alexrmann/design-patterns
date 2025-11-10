@@ -4,29 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modal Prototype</title>
-  </head>
-  <body>
-    <!-- Hidden checkbox to toggle the modal -->
-    <input type="checkbox" id="modal-toggle" />
-
-    <!-- Acts as a button to open the modal -->
-    <label for="modal-toggle" style="cursor: pointer">Open Modal</label>
-
-    <!-- The Modal -->
-    <div class="modal">
-      <div class="modal-content">
-        <!-- Clicking the "×" icon unchecks the checkbox and hides the modal. -->
-        <a
-          href="#"
-          class="close"
-          onclick="document.getElementById('modal-toggle').click();"
-          >&times;</a
-        >
-        <h2>Modal Title</h2>
-        <p>This is a simple modal dialog without JavaScript!</p>
-      </div>
-    </div>
-
     <style>
       /* Hide the checkbox */
       #modal-toggle {
@@ -77,5 +54,27 @@
         color: #ff4c4c;
       }
     </style>
+  </head>
+  <body>
+    <!-- Hidden checkbox to toggle the modal -->
+    <input type="checkbox" id="modal-toggle" />
+
+    <!-- Acts as a button to open the modal -->
+    <label for="modal-toggle" style="cursor: pointer">Open Modal</label>
+
+    <!-- The Modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <!-- Clicking the "×" icon unchecks the checkbox and hides the modal. -->
+        <a
+          href="#"
+          class="close"
+          onclick="document.getElementById('modal-toggle').click();"
+          >&times;</a
+        >
+        <h2>Modal Title</h2>
+        <p>This is a simple modal dialog without JavaScript!</p>
+      </div>
+    </div>
   </body>
 </html>
