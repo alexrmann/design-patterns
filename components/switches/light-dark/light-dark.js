@@ -14,7 +14,6 @@ function switchAuto() {
   document.getElementById("auto").checked = true;
   localStorage.removeItem("mode");
   console.log("Operating system preferred color scheme active");
-
 }
 
 function switchLight() {
