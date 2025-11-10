@@ -1,67 +1,81 @@
-<!-- Hidden checkbox to toggle the modal -->
-    <input type="checkbox" id="modal-toggle">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Prototype</title>
+  </head>
+  <body>
+    <!-- Hidden checkbox to toggle the modal -->
+    <input type="checkbox" id="modal-toggle" />
 
     <!-- Acts as a button to open the modal -->
-    <label for="modal-toggle" style="cursor: pointer;">Open Modal</label>
+    <label for="modal-toggle" style="cursor: pointer">Open Modal</label>
 
     <!-- The Modal -->
     <div class="modal">
-        <div class="modal-content">
-            <!-- Clicking the "×" icon unchecks the checkbox and hides the modal. -->
-            <a href="#" class="close" onclick="document.getElementById('modal-toggle').click();">&times;</a>
-            <h2>Modal Title</h2>
-            <p>This is a simple modal dialog without JavaScript!</p>
-        </div>
+      <div class="modal-content">
+        <!-- Clicking the "×" icon unchecks the checkbox and hides the modal. -->
+        <a
+          href="#"
+          class="close"
+          onclick="document.getElementById('modal-toggle').click();"
+          >&times;</a
+        >
+        <h2>Modal Title</h2>
+        <p>This is a simple modal dialog without JavaScript!</p>
+      </div>
     </div>
 
-<style>
-/* Hide the checkbox */
-#modal-toggle {
-    display: none;
-}
+    <style>
+      /* Hide the checkbox */
+      #modal-toggle {
+        display: none;
+      }
 
-/* The modal background */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
+      /* The modal background */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
 
-/* Show the modal when the checkbox is checked */
-#modal-toggle:checked ~ .modal {
-    display: flex;
-}
+      /* Show the modal when the checkbox is checked */
+      #modal-toggle:checked ~ .modal {
+        display: flex;
+      }
 
-/* The modal content */
-.modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
+      /* The modal content */
+      .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
 
-/* The close button */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    text-decoration: none;
-    color: #333;
-    cursor: pointer;
-}
+      /* The close button */
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        text-decoration: none;
+        color: #333;
+        cursor: pointer;
+      }
 
-.close:hover {
-    color: #ff4c4c;
-}
-
-</style>
+      .close:hover {
+        color: #ff4c4c;
+      }
+    </style>
+  </body>
+</html>
