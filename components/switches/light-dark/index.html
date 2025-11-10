@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light & Dark Mode Switch</title>
+
+    <!-- Base style and gradients -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="light-dark.css" />
+  </head>
+  <body>
+    <div class="background-gradient"></div>
+    <!-- RADIOS -->
+    <fieldset>
+      <legend>Select a color mode:</legend>
+      <input
+        onchange="switchAuto()"
+        type="radio"
+        id="auto"
+        name="mode"
+        value="auto"
+      />
+      <label for="auto"><span class="icon">🖥️</span> OS</label>
+      <input
+        onchange="switchLight()"
+        type="radio"
+        id="light"
+        name="mode"
+        value="light"
+      />
+      <label for="light"><span class="icon">☀️</span>Light</label>
+      <input
+        onchange="switchDark()"
+        type="radio"
+        id="dark"
+        name="mode"
+        value="dark"
+      />
+      <label for="dark"><span class="icon">🌙</span>Dark</label>
+    </fieldset>
+
+    <script src="light-dark.js"></script>
+  </body>
+</html>

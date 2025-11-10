@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  background-image: light-dark(
+    linear-gradient(#d4d7de),
+    linear-gradient(#293558)
+  );
+  border: 8px solid light-dark(#3e5085, #d4d7de);
+}
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+h1, h2, p, fieldset {
+  width: max-content;
+  margin: 3rem auto;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+label {
+  border: 1px solid light-dark(#293558, #d4d7de);
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+  width: 80px;
+}
+
+label:hover {
+  background-color: light-dark(#293558, #d4d7de);
+  color: light-dark(#d4d7de, #293558);
+}
+
+label .icon {
+  font-size: 1.5rem;
+}
+
+input[type="radio"]:checked + label {
+  border: 3px solid light-dark(#293558, #d4d7de);
+}
+
+@media (prefers-color-scheme: light) {
+  .background-gradient {
+    background-image: radial-gradient(#566db0 30%, #293558);
+    mix-blend-mode: hard-light; /* Not functional at this time */
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .background-gradient {
+    background-image: radial-gradient(#293558 30%, #566db0);
+    mix-blend-mode: difference; /* Not functional at this time */
+    opacity: 0.25;
+  }
+}
