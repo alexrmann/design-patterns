@@ -23,7 +23,10 @@ body {
   z-index: -1;
 }
 
-h1, h2, p, fieldset {
+h1,
+h2,
+p,
+fieldset {
   width: max-content;
   margin: 3rem auto;
 }
@@ -75,7 +78,6 @@ input[type="radio"]:checked + label {
 }
 
 @media (prefers-color-scheme: dark) {
-
   .background-gradient {
     background-image: radial-gradient(#293558 30%, #566db0);
     mix-blend-mode: difference; /* Not functional at this time */
