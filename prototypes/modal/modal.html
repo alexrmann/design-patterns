@@ -1,12 +1,13 @@
 <!-- Hidden checkbox to toggle the modal -->
     <input type="checkbox" id="modal-toggle">
 
-    <!-- Button to open the modal -->
+    <!-- Acts as a button to open the modal -->
     <label for="modal-toggle" style="cursor: pointer;">Open Modal</label>
 
     <!-- The Modal -->
     <div class="modal">
         <div class="modal-content">
+            <!-- Clicking the "×" icon unchecks the checkbox and hides the modal. -->
             <a href="#" class="close" onclick="document.getElementById('modal-toggle').click();">&times;</a>
             <h2>Modal Title</h2>
             <p>This is a simple modal dialog without JavaScript!</p>
