@@ -23,7 +23,6 @@ function switchLight() {
   console.log("Light mode active");
 }
 
-
 function switchDark() {
   html.style.setProperty("color-scheme", "dark");
   document.getElementById("dark").checked = true;
