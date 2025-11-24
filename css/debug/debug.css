@@ -3,3 +3,7 @@
 .debug-border {
   border: 1px solid salmon;
 }
+
+.debug-bg {
+  background-color: lightsalmon;
+}

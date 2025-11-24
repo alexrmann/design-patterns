@@ -1,0 +1,64 @@
+/* ~~~~~~~~~~~~~~ */
+/* ~~~ LAYOUT ~~~ */
+/* ~~~~~~~~~~~~~~ */
+
+/* ~~~ POSITIONING ~~~ */
+
+/* Centering without Flex or Grid */
+
+.center-horizontal {
+  /* Center Horizontal-Only */
+  margin: 0 auto;
+}
+
+.center-vertical {
+  /* Center Vertical-Only */
+  display: block;
+  align-content: center;
+}
+
+/* Push left or right */
+
+.margin-left--auto {
+  /* Pushes content to the right edge of container */
+  margin-left: auto;
+}
+
+.margin-right--auto {
+  /* Pushes content to the left edge of container */
+  margin-right: auto;
+}
+
+/* Placement */
+
+.place-start,
+.grid--start {
+  /* Places children at start of container */
+  place-items: start;
+}
+
+.place-center,
+.grid--center {
+  /* Places children at center of a container */
+  place-items: center;
+}
+
+.place-end,
+.grid--end {
+  /* Places children at end of a container */
+  place-items: end;
+}
+
+/* Place Self */
+
+.self--start {
+  place-self: start;
+}
+
+.self--center {
+  place-self: center;
+}
+
+.self--end {
+  place-self: end;
+}

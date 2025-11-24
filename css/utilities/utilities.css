@@ -2,62 +2,7 @@
 /* ~~~ Utility Classes ~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~ */
 
-/* ~~~~~~~~~~~~~~~~~~ */
-/* ~~~ SIZING ~~~ */
-/* ~~~~~~~~~~~~~~~~~~ */
-
-.height-100 {
-  height: 100%;
-}
-
-/* ~~~~~~~~~~~~~~ */
-/* ~~~ LAYOUT ~~~ */
-/* ~~~~~~~~~~~~~~ */
-
-/*
- * FLOW
- *
- * A tiny utility that helps with rhythm by adding margin to siblings
- *
- * --flow-space: The amount of space between siblings: Default 1em;
- */
-
-.flow {
-  --flow-space: 1em;
-}
-
-.flow > * + * {
-  margin-top: 1em;
-  margin-top: var(--flow-space);
-}
-
-/* Margin */
-
-.margin-left--auto {
-  /* Pushes content to the right edge of container */
-  margin-left: auto;
-}
-
-.margin-right--auto {
-  /* Pushes content to the left edge of container */
-  margin-right: auto;
-}
-
-/* Text Alignment */
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-/* Containers */
+/* ~~~ CONTAINERS / WRAPPERS ~~~ */
 
 .container--main {
   width: 90%;
@@ -65,130 +10,103 @@
   margin: 0 auto;
 }
 
-/* ~~~~~~~~~~~~~~~ */
-/* ~~~ FLEXBOX ~~~ */
-/* ~~~~~~~~~~~~~~~ */
+.wrapper {
+  /* 
+  Provides a consistent max width, padded container that sits in the middle of the viewport when the viewport is greater than 60ch wide. */
+  --padding-inline: 1rem;
+  --max-width: 60ch;
 
-.flex {
-  display: flex;
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+  max-width: var(--max-width);
 }
 
-.flex--row {
-  flex-direction: row;
+/* ~~~ WIDTH (Percentages) ~~~ */
+
+.width-100 {
+  width: 100%;
 }
 
-.flex--row-reverse {
-  flex-direction: row-reverse;
+.width-90 {
+  width: 90%;
 }
 
-.flex--column {
-  flex-direction: column;
+.width-80 {
+  width: 80%;
 }
 
-.flex--wrap {
-  flex-wrap: wrap;
+.width-70 {
+  width: 70%;
 }
 
-.flex--space-between {
-  justify-content: space-between;
+.width-60 {
+  width: 60%;
 }
 
-/* Flex Centering */
-
-.flex--center-x {
-  justify-content: center;
+.width-50 {
+  width: 50%;
 }
 
-.flex--center-xy {
-  justify-content: center;
-  align-items: center;
+.width-40 {
+  width: 40%;
 }
 
-.flex--center-y {
-  align-items: center;
+.width-30 {
+  width: 30%;
 }
 
-/* ~~~~~~~~~~~~ */
-/* ~~~ GRID ~~~ */
-/* ~~~~~~~~~~~~ */
-
-.grid {
-  display: grid;
+.width-20 {
+  width: 20%;
 }
 
-.grid--autofill {
-  display: grid;
-  grid-template-columns: repeat(
-    var(--grid-placement, auto-fill),
-    minmax(var(--grid-min-item-size, 16rem), 1fr)
-  );
-  gap: var(--gutter, var(--space-s-l));
+.width-10 {
+  width: 10%;
 }
 
-/*  Example: Grid Autofill Thirds
+/* ~~~ HEIGHT (Percentages) ~~~ */
 
-    Using the following HTML markup:
-
-    <div class="grid" data-layout="thirds">
-      <!-- items -->
-    </div>
-
- */
-.grid--autofill[data-layout="thirds"] {
-  /*
-  By setting --grid-placement to auto-fit, we’re instructing the CSS grid system to try to size columns to fit space rather than the default behavior — with auto-fill — of creating as many columns as it deems sensible. */
-  --grid-placement: auto-fit;
-
-  /*
-  When we set --grid-min-item-size to clamp(16rem, 33%, 20rem), what we’re saying is “the items should be a minimum 16rem, but ideally 33% of the grid container's width, and a maximum 20rem.” */
-  --grid-min-item-size: clamp(16rem, 33%, 28rem);
+.height-100 {
+  height: 100%;
 }
 
-/* Grid Centering */
-
-.grid--center {
-  place-items: center;
+.height-90 {
+  height: 90%;
 }
 
-/* ~~~~~~~~~~~~~ */
-/* ~~~ BLOCK ~~~ */
-/* ~~~~~~~~~~~~~ */
-
-/* Centering without Flex or Grid */
-
-.center-horizontal {
-  /* Center Horizontal-Only */
-  margin: 0 auto;
+.height-80 {
+  height: 80%;
 }
 
-.center-vertical {
-  /* Center Vertical-Only */
-  display: block;
-  align-content: center;
+.height-70 {
+  height: 70%;
 }
 
-/* Place Children */
-
-.place-end {
-  place-items: end;
+.height-60 {
+  height: 60%;
 }
 
-/* Place Self */
-
-.self--start {
-  place-self: start;
+.height-50 {
+  height: 50%;
 }
 
-.self--center {
-  place-self: center;
+.height-40 {
+  height: 40%;
 }
 
-.self--end {
-  place-self: end;
+.height-30 {
+  height: 30%;
+}
+
+.height-20 {
+  height: 20%;
+}
+
+.height-10 {
+  height: 10%;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~ GAP [Flex or Grid] ~~~ */
+/* ~~~ GAP (Flex or Grid) ~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .gap-xxs {
@@ -217,46 +135,4 @@
 
 .gap-xxl {
   gap: 10rem;
-}
-
-/* ~~~~~~~~~~~~~ */
-/* ~~~ FONTS ~~~ */
-/* ~~~~~~~~~~~~~ */
-
-/* ~~~ Font sizes based on root ~~~ */
-
-.font-xxs {
-  font-size: 0.5rem;
-}
-
-.font-xs {
-  font-size: 0.625rem;
-}
-
-.font-s {
-  font-size: 0.75rem;
-}
-
-.font-s-md {
-  font-size: 0.875rem;
-}
-
-.font-md {
-  font-size: 1rem;
-}
-
-.font-md-lg {
-  font-size: 1.25rem;
-}
-
-.font-lg {
-  font-size: 1.5rem;
-}
-
-.font-xl {
-  font-size: 2rem;
-}
-
-.font-xxl {
-  font-size: 3rem;
 }
