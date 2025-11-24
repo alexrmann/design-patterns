@@ -136,11 +136,11 @@
  */
 .grid--autofill[data-layout: "thirds"] {
   /*
-  By setting --grid-placement to auto-fit, we’re instructing the CSS grid system to try to size columns to fit space rather than the default behaviour — with auto-fill — of creating as many columns as it deems sensible. */
+  By setting --grid-placement to auto-fit, we’re instructing the CSS grid system to try to size columns to fit space rather than the default behavior — with auto-fill — of creating as many columns as it deems sensible. */
   --grid-placement: auto-fit;
 
   /*
-  When we set --grid-min-item-size to clamp(16rem, 33%, 20rem), what we’re saying is “the items should be a minimum 16rem, but preferably 33% of the grid container's width, and a maximum 20rem.” */
+  When we set --grid-min-item-size to clamp(16rem, 33%, 20rem), what we’re saying is “the items should be a minimum 16rem, but ideally 33% of the grid container's width, and a maximum 20rem.” */
   --grid-min-item-size: clamp(16rem, 33%, 28rem);
 }
 
