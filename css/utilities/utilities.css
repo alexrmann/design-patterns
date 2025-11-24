@@ -21,14 +21,14 @@
  *
  * --flow-space: The amount of space between siblings: Default 1em;
  */
- 
+
 .flow {
-    --flow-space: 1em;
+  --flow-space: 1em;
 }
 
 .flow > * + * {
-    margin-top: 1em;
-    margin-top: var(--flow-space);
+  margin-top: 1em;
+  margin-top: var(--flow-space);
 }
 
 /* Margin */
@@ -60,9 +60,9 @@
 /* Containers */
 
 .container--main {
-    width: 90%;
-    max-width: 1600px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* ~~~~~~~~~~~~~~~ */
@@ -114,6 +114,34 @@
 
 .grid {
   display: grid;
+}
+
+.grid--autofill {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 16rem), 1fr)
+  );
+  gap: var(--gutter, var(--space-s-l));
+}
+
+/*  Example: Grid Autofill Thirds
+
+    Using the following HTML markup:
+
+    <div class="grid" data-layout="thirds">
+      <!-- items -->
+    </div>
+
+ */
+.grid--autofill[data-layout: "thirds"] {
+  /*
+  By setting --grid-placement to auto-fit, we’re instructing the CSS grid system to try to size columns to fit space rather than the default behaviour — with auto-fill — of creating as many columns as it deems sensible. */
+  --grid-placement: auto-fit;
+
+  /*
+  When we set --grid-min-item-size to clamp(16rem, 33%, 20rem), what we’re saying is “the items should be a minimum 16rem, but preferably 33% of the grid container's width, and a maximum 20rem.” */
+  --grid-min-item-size: clamp(16rem, 33%, 28rem);
 }
 
 /* Grid Centering */
