@@ -134,7 +134,7 @@
     </div>
 
  */
-.grid--autofill[data-layout: "thirds"] {
+.grid--autofill[data-layout="thirds"] {
   /*
   By setting --grid-placement to auto-fit, we’re instructing the CSS grid system to try to size columns to fit space rather than the default behavior — with auto-fill — of creating as many columns as it deems sensible. */
   --grid-placement: auto-fit;
