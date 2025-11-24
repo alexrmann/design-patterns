@@ -14,6 +14,23 @@
 /* ~~~ LAYOUT ~~~ */
 /* ~~~~~~~~~~~~~~ */
 
+/*
+ * FLOW
+ *
+ * A tiny utility that helps with rhythm by adding margin to siblings
+ *
+ * --flow-space: The amount of space between siblings: Default 1em;
+ */
+ 
+.flow {
+    --flow-space: 1em;
+}
+
+.flow > * + * {
+    margin-top: 1em;
+    margin-top: var(--flow-space);
+}
+
 /* Margin */
 
 .margin-left--auto {
