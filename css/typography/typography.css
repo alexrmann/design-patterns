@@ -91,6 +91,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.font-body:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+
 .font-blockquote {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
