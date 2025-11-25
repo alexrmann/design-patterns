@@ -1,0 +1,53 @@
+@import "/typography.css";
+
+h1 {
+  --maxFontSize: var(--font-size-072);
+  --minFontSize: var(--font-size-048);
+  --preferred: calc(3rem + 1.5vw);
+}
+
+h2 {
+  --maxFontSize: var(--font-size-056);
+  --minFontSize: var(--font-size-040);
+  --preferred: calc(2.5rem + 1.325vw);
+}
+
+h3 {
+  --maxFontSize: var(--font-size-048);
+  --minFontSize: var(--font-size-032);
+  --preferred: calc(2.25rem + 1.25vw);
+}
+
+h4 {
+  --maxFontSize: var(--font-size-036);
+  --minFontSize: var(--font-size-028);
+  --preferred: calc(1.5rem + 1vw);
+}
+
+h5 {
+  --maxFontSize: var(--font-size-032);
+  --minFontSize: var(--font-size-024);
+  --preferred: calc(1.25rem + 0.825vw);
+}
+
+h6 {
+  --maxFontSize: var(--font-size-028);
+  --minFontSize: var(--font-size-020);
+  --preferred: calc(1rem + 0.75vw);
+}
+
+p {
+  --maxFontSize: var(--font-size-020);
+  --minFontSize: var(--font-size-016);
+  --preferred: calc(0.875rem + 0.625vw);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: clamp(var(--minFontSize), var(--preferred), var(--maxFontSize));
+}
