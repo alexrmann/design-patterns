@@ -1,21 +1,21 @@
 @import "/typography.css";
 
 h1 {
-  --maxFontSize: var(--font-size-072);
-  --minFontSize: var(--font-size-048);
-  --preferred: calc(3rem + 1.5vw);
+  --maxFontSize: var(--font-size-096);
+  --minFontSize: var(--font-size-064);
+  --preferred: calc(4rem + 1.5vw);
 }
 
 h2 {
-  --maxFontSize: var(--font-size-056);
-  --minFontSize: var(--font-size-040);
-  --preferred: calc(2.5rem + 1.325vw);
+  --maxFontSize: var(--font-size-064);
+  --minFontSize: var(--font-size-048);
+  --preferred: calc(3rem + 1.25vw);
 }
 
 h3 {
   --maxFontSize: var(--font-size-048);
   --minFontSize: var(--font-size-032);
-  --preferred: calc(2.25rem + 1.25vw);
+  --preferred: calc(2.25rem + 1vw);
 }
 
 h4 {
