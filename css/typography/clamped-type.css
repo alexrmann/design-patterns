@@ -36,7 +36,7 @@ h6 {
   --preferred: calc(1rem + 0.75vw);
 }
 
-p {
+p, blockquote {
   --maxFontSize: var(--font-size-020);
   --minFontSize: var(--font-size-016);
   --preferred: calc(0.875rem + 0.625vw);
@@ -48,6 +48,7 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+blockquote {
   font-size: clamp(var(--minFontSize), var(--preferred), var(--maxFontSize));
 }

@@ -5,33 +5,33 @@
 /* ~~~ Root Element Font Variables in pts ~~~ */
 
 :root {
---font-size-004: 0.25rem;
---font-size-006: 0.375rem;
---font-size-008: 0.5rem;
---font-size-009: 0.5625rem;
---font-size-010: 0.625rem;
---font-size-011: 0.6875rem;
---font-size-012: 0.75rem;
---font-size-014: 0.875rem;
---font-size-016: 1rem;
---font-size-020: 1.25rem;
---font-size-024: 1.5rem;
---font-size-028: 1.75rem;
---font-size-032: 2rem;
---font-size-036: 2.25rem;
---font-size-040: 2.5rem;
---font-size-044: 2.75rem;
---font-size-048: 3rem;
---font-size-056: 3.5rem;
---font-size-064: 4rem;
---font-size-072: 4.5rem;
---font-size-080: 5rem;
---font-size-096: 6rem;
---font-size-112: 7rem;
---font-size-128: 8rem;
---font-size-144: 9rem;
---font-size-192: 12rem;
---font-size-256: 18rem;
+  --font-size-004: 0.25rem;
+  --font-size-006: 0.375rem;
+  --font-size-008: 0.5rem;
+  --font-size-009: 0.5625rem;
+  --font-size-010: 0.625rem;
+  --font-size-011: 0.6875rem;
+  --font-size-012: 0.75rem;
+  --font-size-014: 0.875rem;
+  --font-size-016: 1rem;
+  --font-size-020: 1.25rem;
+  --font-size-024: 1.5rem;
+  --font-size-028: 1.75rem;
+  --font-size-032: 2rem;
+  --font-size-036: 2.25rem;
+  --font-size-040: 2.5rem;
+  --font-size-044: 2.75rem;
+  --font-size-048: 3rem;
+  --font-size-056: 3.5rem;
+  --font-size-064: 4rem;
+  --font-size-072: 4.5rem;
+  --font-size-080: 5rem;
+  --font-size-096: 6rem;
+  --font-size-112: 7rem;
+  --font-size-128: 8rem;
+  --font-size-144: 9rem;
+  --font-size-192: 12rem;
+  --font-size-256: 18rem;
 }
 
 /* ~~~ Root Element Font Sizing ~~~ */
@@ -75,7 +75,7 @@
 /* ~~~ Font Type ~~~ */
 
 .font-serif {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .font-sans {
@@ -85,11 +85,11 @@
 /* ~~~ Font Hierarchy ~~~ */
 
 .font-heading {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .font-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .font-body:not(:last-of-type) {
@@ -97,7 +97,7 @@
 }
 
 .font-blockquote {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 /* ~~~ Text Alignment ~~~ */
@@ -112,4 +112,28 @@
 
 .text-right {
   text-align: right;
+}
+
+/* ~~~ Semantic Element Styling ~~~ */
+/* ~~~ Line Length & Height ~~~ */
+
+article {
+  line-height: 1.65;
+}
+
+article.single-column {
+  max-inline-size: 75ch;
+  margin: 0 auto;
+}
+
+article.multi-column {
+  max-inline-size: 50ch;
+  margin: 0 auto;
+}
+
+blockquote {
+  font-style: italic;
+  max-inline-size: 45ch;
+  line-height: 2;
+  margin: 0 auto 1em;
 }
